@@ -4,7 +4,7 @@
 The Module is built from scratch using numpy.
 
 There are implementation examples and demos created with jupyter notebook to  showcase its use.
-There are also a couple of projects completed using the module to serve as the machine learning model.
+There are also a couple of projects completed using the module to serve as the machine learning component.
 
 Current completed algorithms that can be utilized are
 1. Neural Network

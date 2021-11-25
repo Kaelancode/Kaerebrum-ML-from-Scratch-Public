@@ -14,7 +14,8 @@ Current completed algorithms that can be utilized are
 4. Regression 
 
 
-### Projects with Kaerebrum
+<h3> align='center' Projects with Kaerebrum </h3>
+
 
 ***
 [Link to Digit Classification App](https://kaemnist.herokuapp.com/)

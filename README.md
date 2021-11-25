@@ -7,13 +7,14 @@ Current completed algorithms that can be utilized are
 2. Decision Tree
 3. Regression 
 
-<div class="alert alert-block alert-info">
-<b>Tip:</b> Use blue boxes (alert-info) for tips and notes. 
-If it’s a note, you don’t have to include the word “Note”.
-</div>
+There are examples and demos created with jupyter notebook to  showcase its use.
+There are also a couple of projects completed using the module to serve as the machine learning model.
 
 &#reference_number
 
+**Projects**
 ***
+[Link text Here](https://link-url-here.org)
 ![alt text](Classifier_Img.PNG "Title")
+***
 ![alt text](tree_img.PNG "tree")

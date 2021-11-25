@@ -6,3 +6,5 @@ Current completed algorithms that can be utilized are
 1. Neural Network
 2. Decision Tree
 3. Regression 
+
+![alt text](Classifier_Img.PNG "Title")

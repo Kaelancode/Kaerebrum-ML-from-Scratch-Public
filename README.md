@@ -14,7 +14,7 @@ Current completed algorithms that can be utilized are
 4. Regression 
 
 
-<h3> align='center' Projects with Kaerebrum </h3>
+<h3> align='center'> Projects with Kaerebrum </h3>
 
 
 ***

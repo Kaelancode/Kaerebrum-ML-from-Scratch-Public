@@ -8,4 +8,4 @@ Current completed algorithms that can be utilized are
 3. Regression 
 
 ![alt text](Classifier_Img.PNG "Title")
-![alt text](tree_img.png "tree")
+![alt text](tree_img.PNG "tree")

@@ -7,4 +7,4 @@ Current completed algorithms that can be utilized are
 2. Decision Tree
 3. Regression 
 
-![alt text](Classifier_Img.png "Title")
+![alt text](Classifier_Img.PNG "Title")

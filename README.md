@@ -13,10 +13,11 @@ There are also a couple of projects completed using the module to serve as the m
 &#reference_number
 
 ##Projects
-[Link text Here](https://kaemnist.herokuapp.com/)
+
+[Digit Classification App](https://kaemnist.herokuapp.com/)
 ***
 ![alt text](Classifier_Img.PNG "Title")
 
-[Link text Here](https://kaerubrumtree.herokuapp.com/)
+[Decision Tree Code Map Generator](https://kaerubrumtree.herokuapp.com/)
 ***
 ![alt text](tree_img.PNG "tree")

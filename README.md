@@ -4,17 +4,12 @@
 The Module is built from scratch using numpy.
 Current completed algorithms that can be utilized are
 1. Neural Network
-2. Decision Tree
-3. Regression 
+    - [Demo with Augemented Mnist](https://github.com/Kaelancode/Kaerebrum-Public/blob/main/Augment%20Mnist%20with%20Kaerebrum.ipynbm/)
+3. Decision Tree
+4. Regression 
 
 There are examples and demos created with jupyter notebook to  showcase its use.
-There are also a couple of projects completed using the module to serve as the machine learning model.
-
-<div class="alert alert-block alert-info">
-If it’s a note, you don’t have to include the word “Note”.
-</div>
-
-## Projects built with Kaerebrum
+There are also a couple of projects completed using the module to serve as the machine learning model
 
 ***
 [Digit Classification App](https://kaemnist.herokuapp.com/)

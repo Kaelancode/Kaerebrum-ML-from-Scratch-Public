@@ -11,5 +11,6 @@ Current completed algorithms that can be utilized are
 <b>Tip:</b> Use blue boxes (alert-info) for tips and notes. 
 If it’s a note, you don’t have to include the word “Note”.
 </div>
+
 ![alt text](Classifier_Img.PNG "Title")
 ![alt text](tree_img.PNG "tree")

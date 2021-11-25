@@ -13,6 +13,7 @@ Current completed algorithms that can be utilized are
 3. Decision Tree
 4. Regression 
 
+<font color='green'>text</font>
 
 ### Projects with Kaerebrum
 

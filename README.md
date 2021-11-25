@@ -12,7 +12,7 @@ There are also a couple of projects completed using the module to serve as the m
 
 &#reference_number
 
-## Projects
+## Projects built with Kaerebrum
 
 ***
 [Digit Classification App](https://kaemnist.herokuapp.com/)

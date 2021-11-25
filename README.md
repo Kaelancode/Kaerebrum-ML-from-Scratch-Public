@@ -9,7 +9,7 @@ There are also a couple of projects completed using the module to serve as the m
 Current completed algorithms that can be utilized are
 1. Neural Network
     - [Demo with Augemented Mnist](https://github.com/Kaelancode/Kaerebrum-Public/blob/main/Augment%20Mnist%20with%20Kaerebrum.ipynbm/)
-    - [Demo benchmark Kaerebrum with KERAS](https://github.com/Kaelancode/Kaerebrum-Public/blob/main/Augment%20Mnist%20with%20Kaerebrum.ipynbm/)
+    - [Demo benchmark Kaerebrum with KERAS](https://github.com/Kaelancode/Kaerebrum-Public/blob/main/Demo%20Kaerebrum%20Neural.ipynb)
 3. Decision Tree
 4. Regression 
 

@@ -2,13 +2,14 @@ import numpy as np
 import pandas as pd
 import keyboard
 import warnings
+from scipy import sqrt as sqrt
+import joblib
+
 from .utils.activation_funct import *
 from .utils.loss_funct import *
 from .utils.optimizers_funct import *
-from scipy import sqrt as sqrt
 from .utils.Utils import check_y, check_x, multinomial_check
-# not detect other modules for now as init.py not set
-import joblib
+from .utils import *
 
 
 class Axon:

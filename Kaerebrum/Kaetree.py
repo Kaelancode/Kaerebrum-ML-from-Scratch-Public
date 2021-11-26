@@ -1,16 +1,16 @@
 import numpy as np
-import numexpr as ne
-from numba import njit, jit, vectorize
-from numba.experimental import jitclass
+#import numexpr as ne
+#from numba import njit, jit, vectorize
+#from numba.experimental import jitclass
 import pandas as pd
-from utilsGit import check_x, check_y
+from .utils import check_x, check_y
 from graphviz import Digraph
-import Rfcython2
+#import Rfcython2
 #from mlcode.RF import Rfcython2
 #import os
 #os.environ["NUMPY_EXPERIMENTAL_ARRAY_FUNCTION"]="0"
 
-
+'''
 @njit(fastmath=True, cache=True)
 def _gini(n_labels, sum_of_labels):
     totals = sum_of_labels
@@ -22,7 +22,7 @@ def _gini(n_labels, sum_of_labels):
     impurity = 1 - (np.sum((n_labels*n_labels), axis=0).reshape(1,-1)/(totals * totals))
     #impurity = ne.evaluate("1 - (sum((n_labels*n_labels), axis=0).reshape(1,-1)/(totals * totals))")
     return impurity
-
+'''
 
 class DecisionTreeClassifier:  # entropy or gini,
     def __init__(self, min_samples=2, max_depth=10, min_leaf=1, max_leaf_nodes=np.inf, n_feats=None, split='best', measure='gini', cat_thres=5):
@@ -461,7 +461,7 @@ class DecisionTreeClassifier:  # entropy or gini,
         df.set_index('Depth', inplace=True)
         return df
 
-    def top_feature(self, n_features):
+    def top_features(self):
         self._feature_trace = np.atleast_2d(self._feature_trace)
         self._feature_trace[:, 1] = self._feature_trace[:, 1]/self.m # turn into weight: no of samples in node / total samples
         self._feature_trace[:, 3] = self._feature_trace[:, 2] - self._feature_trace[:, 3] # to get inf gain from the split
@@ -677,7 +677,10 @@ class Node:
             s = f'return {classify}'
         else:
             # define threshold within branch as leaves do not have thresholds
-            threshold = '"'+self.threshold+'"' if (self.cat == 'Cat') and (type(self.value) == str or type(self.value) == np.str_) else self.threshold
+            threshold = '"'+self.threshold+'"' if (self.cat == 'Cat' and type(self.threshold) == str) or (self.cat == 'Cat' and type(self.threshold) == np.str_) else self.threshold
+
+            #threshold = '"'+self.threshold+'"' if (self.cat == 'Cat') and (type(self.value) == str or type(self.value) == np.str_) #else self.threshold
+
             #left_data = f'L{prev}{self.depth}{self.feature}'
             #right_data = f'R{prev}{self.depth}{self.feature}'
             left = self.left._coding(prev, indent=indent+1, Left=True)

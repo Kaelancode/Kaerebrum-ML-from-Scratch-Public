@@ -1,6 +1,6 @@
 // Decision Tree
 digraph {
-	dpi=64
+	dpi=96
 	node [fontname=Rubik]
 	node [color="#338be3" fillcolor=lightskyblue fontcolor=midnightblue shape=octagon style="rounded, filled"]
 	Root [label="Root Node at depth 0 ( Sex == female)
@@ -22,26 +22,12 @@ digraph {
  Total: 97   counts = [35 62]
  score = 0.461260
  split_score = 0.443833"]
-	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
-	"Left Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Left Node at depth 4 ( Age <= 28.0)
+	node [color="#3eb265" fillcolor="#fff800" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Left Leaf at depth 4
  Total: 28   counts = [ 6 22]
  score = 0.336735
- split_score = 0.241758"]
-	node [color="#3eb265" fillcolor="#dcff9f" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"LeftLeaf 5 1Left Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Left Leaf at depth 5
- Total: 26   counts = [ 4 22]
- score = 0.260355
  value = 1"]
-	"Left Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "LeftLeaf 5 1Left Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
-	overlap=false
-	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"RightLeaf 5 0Left Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Right Leaf at depth 5
- Total: 2   counts = [2 0]
- score = 0.000000
- value = 0"]
-	"Left Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "RightLeaf 5 0Left Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
-	overlap=false
-	"Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "Left Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik label_scheme=2]
+	"Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "LeftLeaf 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
 	overlap=false
 	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
 	"Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Right Node at depth 4 ( Age <= 5.0)
@@ -55,12 +41,40 @@ digraph {
  value = 1"]
 	"Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "LeftLeaf 5 1Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
 	overlap=false
-	node [color="#3eb265" fillcolor="#fff800" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"RightLeaf 5 1Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Right Leaf at depth 5
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Right Node at depth 5 ( Fare <= 7.65)
  Total: 59   counts = [28 31]
  score = 0.498707
+ split_score = 0.456999"]
+	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Left Leaf at depth 6
+ Total: 5   counts = [0 5]
+ score = 0.000000
  value = 1"]
-	"Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "RightLeaf 5 1Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
+	"Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "LeftLeaf 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
+	overlap=false
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Right Node 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Right Node at depth 6 ( Age <= 25.0)
+ Total: 54   counts = [28 26]
+ score = 0.499314
+ split_score = 0.473870"]
+	node [color="#3eb265" fillcolor="#fff800" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 7 0Right Node 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Left Leaf at depth 7
+ Total: 25   counts = [16  9]
+ score = 0.460800
+ value = 0"]
+	"Right Node 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "LeftLeaf 7 0Right Node 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
+	overlap=false
+	node [color="#3eb265" fillcolor="#fff800" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"RightLeaf 7 1Right Node 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label="Right Leaf at depth 7
+ Total: 29   counts = [12 17]
+ score = 0.485137
+ value = 1"]
+	"Right Node 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "RightLeaf 7 1Right Node 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
+	overlap=false
+	"Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "Right Node 6 1Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
+	overlap=false
+	"Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "Right Node 5 6Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
 	overlap=false
 	"Left Node 3 5Left Node 2 6Left Node 1 0Root" -> "Right Node 4 1Left Node 3 5Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
 	overlap=false
@@ -78,93 +92,23 @@ digraph {
  value = 0"]
 	"Right Node 3 6Left Node 2 6Left Node 1 0Root" -> "LeftLeaf 4 0Right Node 3 6Left Node 2 6Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
 	overlap=false
-	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
-	"Right Node 4 6Right Node 3 6Left Node 2 6Left Node 1 0Root" [label="Right Node at depth 4 ( Fare <= 31.3875)
+	node [color="#3eb265" fillcolor="#fff800" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"RightLeaf 4 0Right Node 3 6Left Node 2 6Left Node 1 0Root" [label="Right Leaf at depth 4
  Total: 8   counts = [6 2]
  score = 0.375000
- split_score = 0.000000"]
-	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"LeftLeaf 5 1Right Node 4 6Right Node 3 6Left Node 2 6Left Node 1 0Root" [label="Left Leaf at depth 5
- Total: 2   counts = [0 2]
- score = 0.000000
- value = 1"]
-	"Right Node 4 6Right Node 3 6Left Node 2 6Left Node 1 0Root" -> "LeftLeaf 5 1Right Node 4 6Right Node 3 6Left Node 2 6Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
-	overlap=false
-	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"RightLeaf 5 0Right Node 4 6Right Node 3 6Left Node 2 6Left Node 1 0Root" [label="Right Leaf at depth 5
- Total: 6   counts = [6 0]
- score = 0.000000
  value = 0"]
-	"Right Node 4 6Right Node 3 6Left Node 2 6Left Node 1 0Root" -> "RightLeaf 5 0Right Node 4 6Right Node 3 6Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
-	overlap=false
-	"Right Node 3 6Left Node 2 6Left Node 1 0Root" -> "Right Node 4 6Right Node 3 6Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
+	"Right Node 3 6Left Node 2 6Left Node 1 0Root" -> "RightLeaf 4 0Right Node 3 6Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
 	overlap=false
 	"Left Node 2 6Left Node 1 0Root" -> "Right Node 3 6Left Node 2 6Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
 	overlap=false
 	"Left Node 1 0Root" -> "Left Node 2 6Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik label_scheme=2]
 	overlap=false
-	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
-	"Right Node 2 1Left Node 1 0Root" [label="Right Node at depth 2 ( Age <= 2.0)
+	node [color="#3eb265" fillcolor="#dcff9f" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"RightLeaf 2 1Left Node 1 0Root" [label="Right Leaf at depth 2
  Total: 134   counts = [  8 126]
  score = 0.112274
- split_score = 0.098979"]
-	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"LeftLeaf 3 0Right Node 2 1Left Node 1 0Root" [label="Left Leaf at depth 3
- Total: 1   counts = [1 0]
- score = 0.000000
- value = 0"]
-	"Right Node 2 1Left Node 1 0Root" -> "LeftLeaf 3 0Right Node 2 1Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
-	overlap=false
-	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
-	"Right Node 3 6Right Node 2 1Left Node 1 0Root" [label="Right Node at depth 3 ( Fare <= 28.7125)
- Total: 133   counts = [  7 126]
- score = 0.099723
- split_score = 0.095884"]
-	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
-	"Left Node 4 6Right Node 3 6Right Node 2 1Left Node 1 0Root" [label="Left Node at depth 4 ( Fare <= 27.75)
- Total: 59   counts = [ 6 53]
- score = 0.182706
- split_score = 0.154880"]
-	node [color="#3eb265" fillcolor="#dcff9f" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"LeftLeaf 5 1Left Node 4 6Right Node 3 6Right Node 2 1Left Node 1 0Root" [label="Left Leaf at depth 5
- Total: 58   counts = [ 5 53]
- score = 0.157551
  value = 1"]
-	"Left Node 4 6Right Node 3 6Right Node 2 1Left Node 1 0Root" -> "LeftLeaf 5 1Left Node 4 6Right Node 3 6Right Node 2 1Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
-	overlap=false
-	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"RightLeaf 5 0Left Node 4 6Right Node 3 6Right Node 2 1Left Node 1 0Root" [label="Right Leaf at depth 5
- Total: 1   counts = [1 0]
- score = 0.000000
- value = 0"]
-	"Left Node 4 6Right Node 3 6Right Node 2 1Left Node 1 0Root" -> "RightLeaf 5 0Left Node 4 6Right Node 3 6Right Node 2 1Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
-	overlap=false
-	"Right Node 3 6Right Node 2 1Left Node 1 0Root" -> "Left Node 4 6Right Node 3 6Right Node 2 1Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik label_scheme=2]
-	overlap=false
-	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
-	"Right Node 4 4Right Node 3 6Right Node 2 1Left Node 1 0Root" [label="Right Node at depth 4 ( Parch <= 1)
- Total: 74   counts = [ 1 73]
- score = 0.026662
- split_score = 0.024948"]
-	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"LeftLeaf 5 1Right Node 4 4Right Node 3 6Right Node 2 1Left Node 1 0Root" [label="Left Leaf at depth 5
- Total: 61   counts = [ 0 61]
- score = 0.000000
- value = 1"]
-	"Right Node 4 4Right Node 3 6Right Node 2 1Left Node 1 0Root" -> "LeftLeaf 5 1Right Node 4 4Right Node 3 6Right Node 2 1Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
-	overlap=false
-	node [color="#3eb265" fillcolor="#dcff9f" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"RightLeaf 5 1Right Node 4 4Right Node 3 6Right Node 2 1Left Node 1 0Root" [label="Right Leaf at depth 5
- Total: 13   counts = [ 1 12]
- score = 0.142012
- value = 1"]
-	"Right Node 4 4Right Node 3 6Right Node 2 1Left Node 1 0Root" -> "RightLeaf 5 1Right Node 4 4Right Node 3 6Right Node 2 1Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
-	overlap=false
-	"Right Node 3 6Right Node 2 1Left Node 1 0Root" -> "Right Node 4 4Right Node 3 6Right Node 2 1Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
-	overlap=false
-	"Right Node 2 1Left Node 1 0Root" -> "Right Node 3 6Right Node 2 1Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
-	overlap=false
-	"Left Node 1 0Root" -> "Right Node 2 1Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
+	"Left Node 1 0Root" -> "RightLeaf 2 1Left Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
 	overlap=false
 	Root -> "Left Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik label_scheme=2]
 	overlap=false
@@ -227,26 +171,12 @@ digraph {
  Total: 357   counts = [305  52]
  score = 0.248884
  split_score = 0.226298"]
-	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
-	"Left Node 3 3Right Node 2 1Right Node 1 0Root" [label="Left Node at depth 3 ( SibSp <= 2)
+	node [color="#3eb265" fillcolor="#fff800" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 3 1Right Node 2 1Right Node 1 0Root" [label="Left Leaf at depth 3
  Total: 13   counts = [4 9]
  score = 0.426036
- split_score = 0.000000"]
-	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"LeftLeaf 4 1Left Node 3 3Right Node 2 1Right Node 1 0Root" [label="Left Leaf at depth 4
- Total: 9   counts = [0 9]
- score = 0.000000
  value = 1"]
-	"Left Node 3 3Right Node 2 1Right Node 1 0Root" -> "LeftLeaf 4 1Left Node 3 3Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
-	overlap=false
-	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"RightLeaf 4 0Left Node 3 3Right Node 2 1Right Node 1 0Root" [label="Right Leaf at depth 4
- Total: 4   counts = [4 0]
- score = 0.000000
- value = 0"]
-	"Left Node 3 3Right Node 2 1Right Node 1 0Root" -> "RightLeaf 4 0Left Node 3 3Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
-	overlap=false
-	"Right Node 2 1Right Node 1 0Root" -> "Left Node 3 3Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik label_scheme=2]
+	"Right Node 2 1Right Node 1 0Root" -> "LeftLeaf 3 1Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
 	overlap=false
 	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
 	"Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Node at depth 3 ( Fare <= 46.9)
@@ -265,12 +195,124 @@ digraph {
  value = 0"]
 	"Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "LeftLeaf 5 0Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
 	overlap=false
-	node [color="#3eb265" fillcolor="#dcff9f" fontcolor=saddlebrown shape=oval style="filled, rounded"]
-	"RightLeaf 5 0Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Leaf at depth 5
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Node at depth 5 ( Embarked == C)
  Total: 319   counts = [285  34]
  score = 0.190446
+ split_score = 0.187944"]
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Left Node at depth 6 ( Fare <= 15.05)
+ Total: 40   counts = [32  8]
+ score = 0.320000
+ split_score = 0.293333"]
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Left Node at depth 7 ( Age <= 22.0)
+ Total: 30   counts = [26  4]
+ score = 0.231111
+ split_score = 0.211111"]
+	node [color="#3eb265" fillcolor="#fff800" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 8 0Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Left Leaf at depth 8
+ Total: 6   counts = [4 2]
+ score = 0.444444
  value = 0"]
-	"Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "RightLeaf 5 0Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
+	"Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "LeftLeaf 8 0Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
+	overlap=false
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Right Node 8 6Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Node at depth 8 ( Fare <= 7.225)
+ Total: 24   counts = [22  2]
+ score = 0.152778
+ split_score = 0.145833"]
+	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 9 0Right Node 8 6Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Left Leaf at depth 9
+ Total: 8   counts = [8 0]
+ score = 0.000000
+ value = 0"]
+	"Right Node 8 6Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "LeftLeaf 9 0Right Node 8 6Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
+	overlap=false
+	node [color="#3eb265" fillcolor="#dcff9f" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"RightLeaf 9 0Right Node 8 6Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Leaf at depth 9
+ Total: 16   counts = [14  2]
+ score = 0.218750
+ value = 0"]
+	"Right Node 8 6Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "RightLeaf 9 0Right Node 8 6Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
+	overlap=false
+	"Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "Right Node 8 6Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
+	overlap=false
+	"Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "Left Node 7 1Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik label_scheme=2]
+	overlap=false
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Right Node 7 6Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Node at depth 7 ( Fare <= 18.7875)
+ Total: 10   counts = [6 4]
+ score = 0.480000
+ split_score = 0.160000"]
+	node [color="#3eb265" fillcolor="#fff800" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 8 1Right Node 7 6Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Left Leaf at depth 8
+ Total: 5   counts = [1 4]
+ score = 0.320000
+ value = 1"]
+	"Right Node 7 6Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "LeftLeaf 8 1Right Node 7 6Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
+	overlap=false
+	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"RightLeaf 8 0Right Node 7 6Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Leaf at depth 8
+ Total: 5   counts = [5 0]
+ score = 0.000000
+ value = 0"]
+	"Right Node 7 6Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "RightLeaf 8 0Right Node 7 6Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
+	overlap=false
+	"Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "Right Node 7 6Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
+	overlap=false
+	"Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "Left Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik label_scheme=2]
+	overlap=false
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Node at depth 6 ( Fare <= 13.0)
+ Total: 279   counts = [253  26]
+ score = 0.169011
+ split_score = 0.165893"]
+	node [color="#3eb265" fillcolor="#dcff9f" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 7 0Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Left Leaf at depth 7
+ Total: 220   counts = [195  25]
+ score = 0.201446
+ value = 0"]
+	"Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "LeftLeaf 7 0Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
+	overlap=false
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Node at depth 7 ( Fare <= 25.4667)
+ Total: 59   counts = [58  1]
+ score = 0.033324
+ split_score = 0.032424"]
+	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 8 0Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Left Leaf at depth 8
+ Total: 36   counts = [36  0]
+ score = 0.000000
+ value = 0"]
+	"Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "LeftLeaf 8 0Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
+	overlap=false
+	node [bgcolor="#89ffff" color="#00d2ff" fillcolor="#89ffff" fontcolor=steelblue4 label_scheme=2 shape=box style="rounded, filled"]
+	"Right Node 8 4Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Node at depth 8 ( Parch <= 0)
+ Total: 23   counts = [22  1]
+ score = 0.083176
+ split_score = 0.077295"]
+	node [color="#3eb265" fillcolor="#dcff9f" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"LeftLeaf 9 0Right Node 8 4Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Left Leaf at depth 9
+ Total: 9   counts = [8 1]
+ score = 0.197531
+ value = 0"]
+	"Right Node 8 4Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "LeftLeaf 9 0Right Node 8 4Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik]
+	overlap=false
+	node [color="#3eb265" fillcolor="#9fffa1" fontcolor=saddlebrown shape=oval style="filled, rounded"]
+	"RightLeaf 9 0Right Node 8 4Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label="Right Leaf at depth 9
+ Total: 14   counts = [14  0]
+ score = 0.000000
+ value = 0"]
+	"Right Node 8 4Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "RightLeaf 9 0Right Node 8 4Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik]
+	overlap=false
+	"Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "Right Node 8 4Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
+	overlap=false
+	"Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "Right Node 7 6Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
+	overlap=false
+	"Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "Right Node 6 6Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
+	overlap=false
+	"Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "Right Node 5 5Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=No color=lightblue2 fontname=Rubik label_scheme=2]
 	overlap=false
 	"Right Node 3 6Right Node 2 1Right Node 1 0Root" -> "Left Node 4 1Right Node 3 6Right Node 2 1Right Node 1 0Root" [label=Yes color=lightblue2 fontname=Rubik label_scheme=2]
 	overlap=false

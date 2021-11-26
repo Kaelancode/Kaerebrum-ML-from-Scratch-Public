@@ -10,8 +10,9 @@ Current completed algorithms that can be utilized are
 1. Neural Network
     - [Demo Notebook with Augemented Mnist](https://github.com/Kaelancode/Kaerebrum-Public/blob/main/Augment%20Mnist%20with%20Kaerebrum.ipynb)
     - [Demo Notebook benchmark Kaerebrum with KERAS](https://github.com/Kaelancode/Kaerebrum-Public/blob/main/Demo%20Kaerebrum%20Neural.ipynb)
-3. Decision Tree
-4. Regression 
+2. Decision Tree
+    - [Demo Notebook with Augemented Mnist](https://github.com/Kaelancode/Kaerebrum-ML-from-Scratch-Public/blob/main/Demo%20Kaerebrum%20Tree.ipynb)
+3. Regression 
 
 <h3 align='center'> Projects with Kaerebrum </h3>
 

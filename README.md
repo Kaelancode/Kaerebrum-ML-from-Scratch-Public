@@ -15,7 +15,7 @@ Current completed algorithms that can be utilized are
 3. Regression 
     - [Demo Notebook benchmark Kaerebrum Regression with SKlearn and Keras](https://github.com/Kaelancode/Kaerebrum-ML-from-Scratch-Public/blob/main/Demo-Kaerebrum%20Regression.ipynb)
 
-<h3 align='center'> Projects with Kaerebrum </h3>
+<h3 align='center'> Projects built with Kaerebrum </h3>
 
 ***
 [Link to Digit Classification App](https://kaemnist.herokuapp.com/)

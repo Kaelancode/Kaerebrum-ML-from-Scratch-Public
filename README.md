@@ -13,6 +13,7 @@ Current completed algorithms that can be utilized are
 2. Decision Tree
     - [Demo Notebook benchnmark Kaerebrum Tree with SKlearn Decision Tree](https://github.com/Kaelancode/Kaerebrum-ML-from-Scratch-Public/blob/main/Demo%20Kaerebrum%20Tree.ipynb)
 3. Regression 
+    - [Demo Notebook benchnmark Kaerebrum Tree with SKlearn Decision Tree](https://github.com/Kaelancode/Kaerebrum-ML-from-Scratch-Public/blob/main/Demo-Kaerebrum%20Regression.ipynb)
 
 <h3 align='center'> Projects with Kaerebrum </h3>
 

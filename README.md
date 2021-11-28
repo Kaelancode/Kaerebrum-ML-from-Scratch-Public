@@ -12,6 +12,7 @@ Current completed algorithms that can be utilized are
     - [Demo Notebook benchmark Kaerebrum Neural with KERAS](https://github.com/Kaelancode/Kaerebrum-Public/blob/main/Demo%20Kaerebrum%20Neural.ipynb)
 2. Decision Tree
     - [Demo Notebook benchmark Kaerebrum Tree with SKlearn Decision Tree](https://github.com/Kaelancode/Kaerebrum-ML-from-Scratch-Public/blob/main/Demo%20Kaerebrum%20Tree.ipynb)
+    - [Tree Graph generated with Kaerebrum Tree](https://github.com/Kaelancode/Kaerebrum-ML-from-Scratch-Public/blob/main/my_graph.png)
 3. Regression 
     - [Demo Notebook benchmark Kaerebrum Regression with SKlearn and Keras](https://github.com/Kaelancode/Kaerebrum-ML-from-Scratch-Public/blob/main/Demo-Kaerebrum%20Regression.ipynb)
 

@@ -7,8 +7,8 @@ import warnings
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import scipy.optimize as op
-from mlcode.utilsGit import*
-import plotly.express as px
+from .utils import*
+#import plotly.express as px
 
 
 class Regression:
@@ -33,8 +33,7 @@ class Regression:
         self.animate = None
 
     def L2_loss(self, hypothesis, X, y, reg, reg_d, bounce=False):
-        #print('L2 loss', bounce)
-        cost = (1/(2*self.m))*sum((hypothesis-y)**2)+reg
+        cost = (1/(2*self.m))*np.sum((hypothesis-y)**2)+reg
         if bounce:
             return cost
         gradient = (1/self.m)*((hypothesis-y)@X) + reg_d
@@ -42,7 +41,6 @@ class Regression:
         return weights, cost, gradient
 
     def L1_loss(self, hypothesis, X, y, reg, reg_d, bounce=False):
-        #print('L1 loss', bounce)
         cost = (1/(2*self.m))*sum(np.abs(hypothesis-y))+reg
         if bounce:
             return cost
@@ -51,11 +49,8 @@ class Regression:
         return weights, cost, gradient
 
     def L2_reg(self, weights):
-        # print('weight[1:]',weights[1:])
         reg = self.ld/(2*self.m)*(weights[1:]@weights[1:].T)
-        # print('reg', reg)  # square itself and sum it up
         reg_d = np.insert(self.ld/self.m*weights[1:], 0, 0)
-        # print('reg_d', reg_d)
         return reg, reg_d
 
     def L1_reg(self, weights):
@@ -205,7 +200,7 @@ class Regression:
     def check_weights(self, weights):
         checked_weights = weights
         if checked_weights is None:
-            checked_weights = np.zeros(self.n+1)
+            checked_weights = np.zeros(self.n+1)        
         return checked_weights
 
     def check_batch(self, batch):
@@ -232,7 +227,8 @@ class Regression:
 
     def check_rand(self, check_best_fit, check_convergence, best_fit, cost_list, weights, previous_cost, threshold, iter):
         best = check_best_fit(best_fit, cost_list, weights)
-        if self.batch < self.m:
+        #if self.batch < self.m:
+        if self.batch <= self.m:
             check, previous_cost_ = check_convergence(previous_cost, cost_list, threshold, iter)
         return best, check, previous_cost_
 
@@ -344,6 +340,9 @@ class Regression:
                 self.cost_update(fig, ax)
 
             for j in range(X.shape[0]//self.batch + extra):
+                if self.kill_button():
+                    print('\n(q)Killed Training')
+                    break
                 start = j * self.batch
                 end = start + self.batch
                 end = X.shape[0] if end >= X.shape[0] else end
@@ -354,8 +353,10 @@ class Regression:
                 self.m = X_batch.shape[0]
                 hypothesis = self.implement_regression(self.weights, X_batch)
                 reg, reg_d = self.reg_function(self.weights)
+
                 _, batch_cost, gradient = self.loss_function(hypothesis, X_batch, y_batch, reg, reg_d)
-                self.velocity = self.momentum*self.velocity + self.alpha*gradient
+                self.velocity = self.momentum*self.velocity + self.alpha * gradient
+
                 if self.multinomial:
                     self.weights -= self.velocity
                 else:
